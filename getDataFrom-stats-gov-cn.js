@@ -1,4 +1,4 @@
-//从国家统计局抓取数据。
+//从国家统计局抓取数据。//从国家统计局抓取数据:http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201401/t20140116_501070.html
 var areaDate = []
 var lastP=null,lastC=null,lastA=null;
 $(".TRS_Editor p.MsoNormal").each(function(i){

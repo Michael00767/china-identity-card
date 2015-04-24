@@ -1,0 +1,25 @@
+{
+  "name": "china-identity-card",
+  "version": "1.0.0",
+  "description": "China identity card helper",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Michael00767/china-identity-card.git"
+  },
+  "keywords": [
+    "china",
+    "idenity",
+    "card",
+    "helper"
+  ],
+  "author": "Michael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Michael00767/china-identity-card/issues"
+  },
+  "homepage": "https://github.com/Michael00767/china-identity-card"
+}

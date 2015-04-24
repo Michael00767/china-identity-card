@@ -10,13 +10,13 @@
     console.log(validateResult):
 ## Result ##
 
-    {
-	    birthday:"1900-01-01",
-	    age:115,
-	    province:
-	    area:
-	    city:
-	    sex:"男"
+    { 
+    	birthday: '1952-01-01',
+	age: 63,
+	province: '黑龙江省',
+	city: '哈尔滨市',
+	area: '平房区',
+	gender: '男'
     }
     true
 

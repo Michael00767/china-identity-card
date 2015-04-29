@@ -20,13 +20,33 @@ var getInfo = function (identity,cb) {
 		province	: null,
 		city		: null,
 		area		: null,
-		gender			: null
+		gender		: null,
+		generation	: 2
 	}
 
 	if(!validate(identity))
 		return cb(new Error("Invalid Identity"))
-
-	identityObj.birthday = identity.substr(6,4)+"-"+identity.substr(10,2)+"-"+identity.substr(12,2)
+	var generation = 2;
+	if(identity.length == 15){
+		generation = 1
+	}
+	if(generation == 1){
+		identityObj.birthday = "19"+identity.substr(6,2)+"-"+identity.substr(8,2)+"-"+identity.substr(10,2)
+		if(identity.charAt(14)%2 == 1){
+			identityObj.gender = "男"
+		}else{
+			identityObj.gender = "女"
+		}
+		identityObj.generation = 1
+	}else{
+		identityObj.birthday = identity.substr(6,4)+"-"+identity.substr(10,2)+"-"+identity.substr(12,2)
+		if(identity.charAt(16)%2 == 1){
+			identityObj.gender = "男"
+		}else{
+			identityObj.gender = "女"
+		}
+		identityObj.generation = 2
+	}
 	identityObj.age 	 = getAge(identityObj.birthday)
 	var provinceCode 	 = identity.substr(0,2)
 	var cityCode 	 	 = identity.substr(2,2)
@@ -49,11 +69,6 @@ var getInfo = function (identity,cb) {
 			return true;
 		}
 	})
-	if(identity.charAt(16)%2 == 1){
-		identityObj.gender = "男"
-	}else{
-		identityObj.gender = "女"
-	}
 	return cb(null,identityObj);
 }
 

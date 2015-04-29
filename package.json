@@ -1,6 +1,6 @@
 {
   "name": "china-identity-card",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "China identity card helper",
   "main": "index.js",
   "scripts": {

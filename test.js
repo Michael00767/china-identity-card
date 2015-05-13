@@ -21,3 +21,13 @@ identity.getInfo("140303020401073",function (err,identityObj) {
 		console.log(identityObj);
 	}
 });
+
+var isVaild = identity.validate("44532119105084630")
+console.log("校验身份证：","44532119105084630",isVaild);
+identity.getInfo("44532119105084630",function (err,identityObj) {
+	if(err){
+		console.log(err,"invalid identity")
+	}else{
+		console.log(identityObj);
+	}
+});
